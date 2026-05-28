@@ -11,10 +11,10 @@
   --line: rgba(17, 24, 39, .12);
   --text: #101726;
   --muted: #5d687a;
-  --cyan: #ff3d9a;
-  --gold: #ff4faa;
+  --cyan: #cf3a69;
+  --gold: #d14b55;
   --green: #00e68a;
-  --pink: #ff6ab7;
+  --pink: #d14b55;
   --font-display: "Lemon Milk", "Arial Black", Impact, sans-serif;
   --font-body: "Inter", "Poppins", "Segoe UI", Arial, sans-serif;
 }
@@ -26,7 +26,7 @@ html { scroll-padding-top: 86px; }
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 12% 18%, rgba(255, 61, 154, .14), transparent 28rem),
+    radial-gradient(circle at 12% 18%, rgba(233, 131, 138, 0.381), transparent 28rem),
     radial-gradient(circle at 85% 8%, rgba(255, 207, 51, .15), transparent 22rem),
     linear-gradient(180deg, #ffffff 0%, var(--bg) 54%, #eef2f8 100%);
   color: var(--text);
@@ -66,8 +66,20 @@ h1, h2, h3, h4 {
   letter-spacing: 0;
 }
 
-.navbar-brand { color: var(--text) !important; }
-.navbar-brand span { color: var(--cyan); }
+.navbar-brand {
+  color: var(--text) !important;
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  max-width: calc(100% - 58px);
+  line-height: 1;
+}
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
 .nav-link { color: rgba(16, 23, 38, .76); font-size: .82rem; }
 .nav-link:hover,
 .nav-link.active { color: var(--cyan); }
@@ -160,7 +172,7 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: auto 0 0 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--cyan), var(--pink), var(--gold));
+  background: #bd3c56;
 }
 
 .tech-card:hover,
@@ -185,7 +197,7 @@ h1, h2, h3, h4 {
 
 .btn-tech {
   border: 1px solid rgba(255, 61, 154, .7);
-  background: linear-gradient(135deg, var(--cyan), #b400ff);
+  background: linear-gradient(135deg, var(--cyan), #cb1768);
   color: #ffffff;
   border-radius: 6px;
   padding: .85rem 1.15rem;
@@ -211,6 +223,13 @@ h1, h2, h3, h4 {
   background: var(--surface);
 }
 .image-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.logo-frame {
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+.logo-frame img { max-height: 420px; object-fit: contain; }
 
 .stats-strip {
   border-top: 1px solid var(--line);
@@ -281,6 +300,7 @@ h1, h2, h3, h4 {
   .section-pad { padding: 3.5rem 0; }
   .hero h1 { font-size: 2.55rem; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .brand-logo { width: 40px; height: 40px; }
   .btn-tech,
   .btn-outline-tech { width: 100%; margin-bottom: .75rem; }
 }
