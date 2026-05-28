@@ -113,6 +113,21 @@ h3 {
   color: #ff4fa3;
   font-family: "Press Start 2P", monospace;
   font-size: 0.9rem;
+  min-height: 64px;
+  padding: 0;
+}
+
+.game-brand img {
+  width: auto;
+  height: clamp(56px, 7vw, 68px);
+  max-height: 68px;
+  object-fit: contain;
+  transition: height 0.2s ease;
+}
+
+.game-navbar.navbar-scrolled .game-brand img {
+  height: 58px;
+  max-height: 58px;
 }
 
 .game-brand small {
@@ -694,6 +709,15 @@ h3 {
     min-height: 72px;
   }
 
+  .game-brand {
+    min-height: 58px;
+  }
+
+  .game-brand img {
+    height: 58px;
+    max-height: 58px;
+  }
+
   .navbar-collapse {
     margin-top: 1rem;
     padding: 1rem;
@@ -736,11 +760,18 @@ h3 {
 
   .game-brand {
     font-size: 0.72rem;
+    min-height: 52px;
   }
 
   .brand-block {
     width: 42px;
     height: 42px;
+  }
+
+  .game-brand img,
+  .game-navbar.navbar-scrolled .game-brand img {
+    height: 52px;
+    max-height: 52px;
   }
 
   .hero,
