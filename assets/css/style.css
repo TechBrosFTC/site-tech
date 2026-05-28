@@ -66,8 +66,20 @@ h1, h2, h3, h4 {
   letter-spacing: 0;
 }
 
-.navbar-brand { color: var(--text) !important; }
-.navbar-brand span { color: var(--cyan); }
+.navbar-brand {
+  color: var(--text) !important;
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  max-width: calc(100% - 58px);
+  line-height: 1;
+}
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
 .nav-link { color: rgba(16, 23, 38, .76); font-size: .82rem; }
 .nav-link:hover,
 .nav-link.active { color: var(--cyan); }
@@ -211,6 +223,13 @@ h1, h2, h3, h4 {
   background: var(--surface);
 }
 .image-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.logo-frame {
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+.logo-frame img { max-height: 420px; object-fit: contain; }
 
 .stats-strip {
   border-top: 1px solid var(--line);
@@ -281,6 +300,7 @@ h1, h2, h3, h4 {
   .section-pad { padding: 3.5rem 0; }
   .hero h1 { font-size: 2.55rem; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .brand-logo { width: 40px; height: 40px; }
   .btn-tech,
   .btn-outline-tech { width: 100%; margin-bottom: .75rem; }
 }
