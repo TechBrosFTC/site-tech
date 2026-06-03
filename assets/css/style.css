@@ -56,11 +56,21 @@ p { color: var(--muted); }
   backdrop-filter: blur(18px);
 }
 
+.subtitle{
+  color: var(--gold);
+  text-transform: uppercase;
+  font-size: 25px !important;
+  margin-bottom: .8rem;
+}
+
+
+
 .navbar-brand,
 .nav-link,
 .dropdown-item,
 .btn,
 .eyebrow,
+.subtitle,
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   letter-spacing: 0;
@@ -137,8 +147,12 @@ h1, h2, h3, h4 {
 .eyebrow {
   color: var(--gold);
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: 20px;
   margin-bottom: .8rem;
+}
+
+.bg1{
+  background-color: #ffffff;
 }
 
 .section-pad { padding: 5rem 0; }
@@ -270,7 +284,7 @@ h1, h2, h3, h4 {
 
 .cta-band {
   background:
-    linear-gradient(135deg, rgba(255, 61, 154, .17), rgba(255, 207, 51, .12)),
+    linear-gradient(135deg, rgba(255, 61, 155, 0.098), rgba(255, 207, 51, 0.043)),
     var(--surface-2);
   border-block: 1px solid var(--line);
 }
